@@ -1,35 +1,35 @@
 <<<<<<< HEAD
-# ?? Indeed Job Scraper - Application de recherche d'offres
+#  Indeed Job Scraper - Application de recherche d'offres
 
 Application Flask moderne pour scraper et afficher les offres d'emploi et de stages depuis Indeed (France et Maroc).
 
-## ? Fonctionnalités
+##  FonctionnalitÃ©s
 
-- ?? Recherche par mot-clé et pays
-- ?? Statistiques en temps réel
-- ?? Dates formatées et complètes
-- ?? Affichage du salaire (si disponible)
-- ?? Type de contrat
-- ?? Mise à jour automatique toutes les 2 heures
-- ?? Interface responsive et moderne
-- ?? Design avec animations et effets visuels
+-  Recherche par mot-clÃ© et pays
+-  Statistiques en temps rÃ©el
+-  Dates formatÃ©es et complÃ¨tes
+-  Affichage du salaire (si disponible)
+-  Type de contrat
+-  Mise Ã  jour automatique toutes les 2 heures
+-  Interface responsive et moderne
+-  Design avec animations et effets visuels
 
-## ?? Prérequis
+##  PrÃ©requis
 
-- Python 3.8 ou supérieur
-- Google Chrome installé sur votre système
-- ChromeDriver (géré automatiquement par webdriver-manager)
+- Python 3.8 ou supÃ©rieur
+- Google Chrome installÃ© sur votre systÃ¨me
+- ChromeDriver (gÃ©rÃ© automatiquement par webdriver-manager)
 
-## ?? Installation
+##  Installation
 
-### 1. Créer la structure du projet
+### 1. CrÃ©er la structure du projet
 ```bash
 mkdir indeed-scraper
 cd indeed-scraper
 mkdir templates
 ```
 
-### 2. Créer un environnement virtuel (recommandé)
+### 2. CrÃ©er un environnement virtuel (recommandÃ©)
 ```bash
 # Windows
 python -m venv venv
@@ -40,7 +40,7 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 3. Installer les dépendances
+### 3. Installer les dÃ©pendances
 ```bash
 pip install -r requirements.txt
 ```
@@ -48,10 +48,10 @@ pip install -r requirements.txt
 ### 4. Structure du projet finale
 ```
 indeed-scraper/
-¦
+Â¦
 +-- app.py                          # Application Flask principale
 +-- scrape_indeed_selenium.py       # Script de scraping
-+-- requirements.txt                # Dépendances Python
++-- requirements.txt                # DÃ©pendances Python
 +-- README.md                       # Ce fichier
 +-- templates/
     +-- index.html                  # Interface utilisateur
@@ -66,57 +66,57 @@ python app.py
 
 L'application sera accessible sur : `http://127.0.0.1:5000`
 
-### Première utilisation
+### PremiÃ¨re utilisation
 
-1. **Chargement initial** : L'application lance automatiquement une recherche au démarrage
-2. **Recherche personnalisée** : 
-   - Entrez un mot-clé (ex: "Data Scientist", "Stage Marketing")
-   - Sélectionnez le pays (France ???? ou Maroc ????)
+1. **Chargement initial** : L'application lance automatiquement une recherche au dÃ©marrage
+2. **Recherche personnalisÃ©e** : 
+   - Entrez un mot-clÃ© (ex: "Data Scientist", "Stage Marketing")
+   - SÃ©lectionnez le pays (France ???? ou Maroc ????)
    - Cliquez sur "?? Rechercher"
-3. **Résultats** : Les offres s'affichent sous forme de cartes avec toutes les informations
+3. **RÃ©sultats** : Les offres s'affichent sous forme de cartes avec toutes les informations
 
-### Mise à jour automatique
+### Mise Ã  jour automatique
 
-L'application se met à jour automatiquement **toutes les 2 heures** pour récupérer les nouvelles offres.
+L'application se met Ã  jour automatiquement **toutes les 2 heures** pour rÃ©cupÃ©rer les nouvelles offres.
 
 ## ??? Configuration
 
-### Modifier les paramètres par défaut
+### Modifier les paramÃ¨tres par dÃ©faut
 
 Dans `app.py`, vous pouvez ajuster :
 ```python
-mot_cle_defaut = "Data Scientist"  # Recherche par défaut
-pays_defaut = "fr"                  # Pays par défaut (fr ou ma)
+mot_cle_defaut = "Data Scientist"  # Recherche par dÃ©faut
+pays_defaut = "fr"                  # Pays par dÃ©faut (fr ou ma)
 ```
 
-### Modifier la fréquence de mise à jour
+### Modifier la frÃ©quence de mise Ã  jour
 ```python
 # Dans app.py, ligne du scheduler
 scheduler.add_job(func=mise_a_jour_offres, trigger="interval", hours=2)
-# Changez 'hours=2' par la valeur souhaitée
+# Changez 'hours=2' par la valeur souhaitÃ©e
 ```
 
-### Augmenter le nombre de pages scrapées
+### Augmenter le nombre de pages scrapÃ©es
 ```python
 # Dans app.py, dans la route index()
 offres_cache = scrape_indeed_selenium(mot_cle, pays=pays, pages=1)
-# Changez 'pages=1' par le nombre souhaité (attention au temps d'exécution)
+# Changez 'pages=1' par le nombre souhaitÃ© (attention au temps d'exÃ©cution)
 ```
 
-## ?? Informations extraites
+##  Informations extraites
 
 Pour chaque offre :
-- ? **Titre du poste**
-- ? **Entreprise**
-- ? **Lieu**
-- ? **Date de publication** (formatée)
-- ? **Salaire** (si disponible)
-- ? **Type de contrat** (si disponible)
-- ? **Lien vers l'offre**
-- ? **Catégorie/Mot-clé**
-- ? **Pays**
+-  **Titre du poste**
+-  **Entreprise**
+-  **Lieu**
+-  **Date de publication** (formatÃ©e)
+-  **Salaire** (si disponible)
+-  **Type de contrat** (si disponible)
+-  **Lien vers l'offre**
+-  **CatÃ©gorie/Mot-clÃ©**
+-  **Pays**
 
-## ?? Personnalisation de l'interface
+##  Personnalisation de l'interface
 
 ### Changer les couleurs du gradient
 
@@ -124,7 +124,7 @@ Dans `templates/index.html`, modifiez les couleurs CSS :
 ```css
 body {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  /* Remplacez par vos couleurs préférées */
+  /* Remplacez par vos couleurs prÃ©fÃ©rÃ©es */
 }
 ```
 
@@ -139,28 +139,28 @@ body {
 -->
 ```
 
-## ?? Résolution des problèmes
+##  RÃ©solution des problÃ¨mes
 
-### Problème : ChromeDriver introuvable
+### ProblÃ¨me : ChromeDriver introuvable
 
-**Solution** : ChromeDriver est géré automatiquement par `webdriver-manager`. Assurez-vous que Chrome est installé.
+**Solution** : ChromeDriver est gÃ©rÃ© automatiquement par `webdriver-manager`. Assurez-vous que Chrome est installÃ©.
 
-### Problème : Aucune offre trouvée
+### ProblÃ¨me : Aucune offre trouvÃ©e
 
 **Causes possibles** :
-- Indeed a modifié sa structure HTML
-- Le mot-clé ne retourne aucun résultat
-- Problème de connexion Internet
+- Indeed a modifiÃ© sa structure HTML
+- Le mot-clÃ© ne retourne aucun rÃ©sultat
+- ProblÃ¨me de connexion Internet
 
-**Solution** : Vérifiez votre connexion et essayez un autre mot-clé
+**Solution** : VÃ©rifiez votre connexion et essayez un autre mot-clÃ©
 
-### Problème : L'application est lente
+### ProblÃ¨me : L'application est lente
 
 **Solution** : 
-- Réduisez le nombre de pages : `pages=1`
-- Indeed limite parfois les requêtes trop fréquentes
+- RÃ©duisez le nombre de pages : `pages=1`
+- Indeed limite parfois les requÃªtes trop frÃ©quentes
 
-### Problème : Erreur de port déjà utilisé
+### ProblÃ¨me : Erreur de port dÃ©jÃ  utilisÃ©
 
 **Solution** :
 ```bash
@@ -168,59 +168,59 @@ body {
 app.run(debug=True, use_reloader=False, port=5001)
 ```
 
-## ?? Notes importantes
+##  Notes importantes
 
-- ?? Le scraping doit respecter les conditions d'utilisation d'Indeed
-- ?? Le temps de chargement dépend du nombre de pages et de la connexion
-- ?? Le mode `--headless` de Selenium rend le navigateur invisible
-- ?? Les données ne sont pas sauvegardées (rechargées à chaque recherche)
+-  Le scraping doit respecter les conditions d'utilisation d'Indeed
+-  Le temps de chargement dÃ©pend du nombre de pages et de la connexion
+-  Le mode `--headless` de Selenium rend le navigateur invisible
+-  Les donnÃ©es ne sont pas sauvegardÃ©es (rechargÃ©es Ã  chaque recherche)
 
-## ?? Améliorations futures possibles
+##  AmÃ©liorations futures possibles
 
-- [ ] Export des résultats en CSV/Excel
-- [ ] Sauvegarde des offres dans une base de données
-- [ ] Filtres avancés (date, type de contrat, salaire)
+- [ ] Export des rÃ©sultats en CSV/Excel
+- [ ] Sauvegarde des offres dans une base de donnÃ©es
+- [ ] Filtres avancÃ©s (date, type de contrat, salaire)
 - [ ] Notifications par email pour nouvelles offres
-- [ ] Support de pays supplémentaires
+- [ ] Support de pays supplÃ©mentaires
 - [ ] Graphiques de statistiques
 - [ ] Historique des recherches
 
-## ?? Licence
+##  Licence
 
-Ce projet est à usage éducatif. Respectez les conditions d'utilisation d'Indeed.
+Ce projet est Ã  usage Ã©ducatif. Respectez les conditions d'utilisation d'Indeed.
 
-## ????? Support
+##  Support
 
-Pour toute question ou problème :
-1. Vérifiez ce README
+Pour toute question ou problÃ¨me :
+1. VÃ©rifiez ce README
 2. Consultez les messages d'erreur dans le terminal
-3. Vérifiez que toutes les dépendances sont installées
+3. VÃ©rifiez que toutes les dÃ©pendances sont installÃ©es
 
-## ?? Auteur
+##  Auteur
 
 Projet de Web Scraping - Indeed Job Scraper
 
-## ?? Contact
+##  Contact
 
-Pour toute question, suggestion ou amélioration, n'hésitez pas à ouvrir une issue.
+Pour toute question, suggestion ou amÃ©lioration, n'hÃ©sitez pas Ã  ouvrir une issue.
 
 ---
 
-**Bonne recherche d'emploi ! ???**
+**Bonne recherche d'emploi !**
 ```
 
 ---
 
-## ? **Vérification finale de votre structure :**
+##  **VÃ©rification finale de votre structure :**
 ```
 indeed-scraper/
-¦
-+-- scrape_indeed_selenium.py    ?
-+-- app.py                       ?
-+-- requirements.txt             ?
-+-- README.md                    ? (maintenant créé)
+Â¦
++-- scrape_indeed_selenium.py    
++-- app.py                       
++-- requirements.txt             
++-- README.md                     
 +-- templates/
-    +-- index.html               ?
+    +-- index.html               
 =======
 # Projet_Web_Scraping
 >>>>>>> cf3dc481679186a1167bce92ad71569592190201
