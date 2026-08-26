@@ -211,16 +211,3 @@ Pour toute question, suggestion ou amélioration, n'hésitez pas à ouvrir une i
 
 ---
 
-##  **Vérification finale de votre structure :**
-```
-indeed-scraper/
-¦
-+-- scrape_indeed_selenium.py    
-+-- app.py                       
-+-- requirements.txt             
-+-- README.md                     
-+-- templates/
-    +-- index.html               
-=======
-# Projet_Web_Scraping
->>>>>>> cf3dc481679186a1167bce92ad71569592190201
