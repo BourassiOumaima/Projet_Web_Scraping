@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 #  Indeed Job Scraper - Application de recherche d'offres
 
 Application Flask moderne pour scraper et afficher les offres d'emploi et de stages depuis Indeed (France et Maroc).
